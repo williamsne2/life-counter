@@ -1,4 +1,4 @@
-# mtg-counter
+# MTG Counter
 
 MTG Counter is an open source react-native app that is a helpful tool for keeping track of life totals in card games like Magic: The Gathering. This design of the app is based on Talisman Games LifeTotal app, and is meant as a learning tool that can be extended quite easily.
 
@@ -23,9 +23,9 @@ Further extensions that can be implemented either in this app or a companion app
 ## Running the app
 
 To run the MTG Counter app clone this repository and install expo via
-<code>npm i expo-cli</code>
-then start the app by calling:
-<code>cd mtg-counter</code>
-<code>yarn start</code>
-or
-<code>expo start</code>
+<code>npm i expo-cli</code>\n
+then start the app by calling:\n
+<code>cd mtg-counter</code>\n
+<code>yarn start</code>\n
+or\n
+<code>expo start</code>\n
