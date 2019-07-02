@@ -11,6 +11,7 @@ class Players extends Component {
             key={player.id}
             onIncrement={this.props.onIncrement}
             onDecrement={this.props.onDecrement}
+            onManaPress={this.props.onManaPress}
             player={player}
           />
         ))}

@@ -9,8 +9,8 @@ class Main extends Component {
 
   state = {
     players: [
-      { id: 1, lifetotal: 20, bkgColor: "red", isDead: false },
-      { id: 2, lifetotal: 20, bkgColor: "blue", isDead: false }
+      { id: 1, lifetotal: 20, bkgColor: "red", isTop: true, isDead: false },
+      { id: 2, lifetotal: 20, bkgColor: "blue", isTop: false, isDead: false }
     ]
   };
 
@@ -30,12 +30,46 @@ class Main extends Component {
     this.setState({ players });
   };
 
+  changeColors = player => {
+    const players = [...this.state.players];
+    const index = players.indexOf(player);
+    players[index] = { ...player };
+    let newColor = this.cycleColor(players[index].bkgColor);
+    players[index].bkgColor = newColor;
+    this.setState({ players });
+  };
+
+  cycleColor = color => {
+    let newColor = "";
+    switch (color) {
+      case "white":
+        newColor = "blue";
+        break;
+      case "blue":
+        newColor = "black";
+        break;
+      case "black":
+        newColor = "red";
+        break;
+      case "red":
+        newColor = "green";
+        break;
+      case "green":
+        newColor = "white";
+        break;
+      default:
+        newColor = "blue";
+    }
+    return newColor;
+  };
+
   render() {
     return (
       <Players
         players={this.state.players}
         onIncrement={this.increment}
         onDecrement={this.decrement}
+        onManaPress={this.changeColors}
       />
     );
   }
