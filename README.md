@@ -22,10 +22,16 @@ Further extensions that can be implemented either in this app or a companion app
 
 ## Running the app
 
-To run the MTG Counter app clone this repository and install expo via
-<code>npm i expo-cli</code>\n
-then start the app by calling:\n
-<code>cd mtg-counter</code>\n
-<code>yarn start</code>\n
-or\n
-<code>expo start</code>\n
+To run the MTG Counter app clone this repository, make sure node is on your system and install expo via
+<br>
+<code>npm i expo-cli</code>
+<br>
+then start the app by calling:
+<br>
+<code>cd mtg-counter</code>
+<br>
+<code>yarn start</code>
+<br>
+or
+<br>
+<code>expo start</code>
