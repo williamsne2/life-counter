@@ -19,3 +19,13 @@ Further extensions that can be implemented either in this app or a companion app
 3. Deck history I - simple photo saving
 4. Deck history II - manual entry using scryfall api
 5. Deck history III - OCR to convert a photo into a deck using scryfall
+
+## Running the app
+
+To run the MTG Counter app clone this repository and install expo via
+<code>npm i expo-cli</code>
+then start the app by calling:
+<code>cd mtg-counter</code>
+<code>yarn start</code>
+or
+<code>expo start</code>
