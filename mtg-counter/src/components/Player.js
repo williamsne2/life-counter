@@ -49,7 +49,13 @@ class Player extends Component {
             </TouchableHighlight>
           </View>
           <View style={styles.lifetotals}>
-            <Text style={styles.bigText}>{this.props.player.lifetotal}</Text>
+            <Text
+              style={
+                this.props.player.isDead ? styles.textDead : styles.bigText
+              }
+            >
+              {this.props.player.lifetotal}
+            </Text>
           </View>
           <View style={styles.manaButton}>
             <TouchableHighlight
@@ -127,6 +133,14 @@ const styles = StyleSheet.create({
     fontSize: 80,
     fontWeight: "700",
     color: "#FFF",
+    textShadowColor: "rgba(0, 0, 0, 0.75)",
+    textShadowOffset: { width: -1, height: 1 },
+    textShadowRadius: 10
+  },
+  textDead: {
+    fontSize: 130,
+    fontWeight: "700",
+    color: "rgb(190, 0, 20)",
     textShadowColor: "rgba(0, 0, 0, 0.75)",
     textShadowOffset: { width: -1, height: 1 },
     textShadowRadius: 10

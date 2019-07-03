@@ -9,8 +9,20 @@ class Main extends Component {
 
   state = {
     players: [
-      { id: 1, lifetotal: 20, bkgColor: "rgb(211, 32, 42)", isTop: true },
-      { id: 2, lifetotal: 20, bkgColor: "rgb(14, 104, 171)", isTop: false }
+      {
+        id: 1,
+        lifetotal: 20,
+        bkgColor: "rgb(211, 32, 42)",
+        isDead: false,
+        isTop: true
+      },
+      {
+        id: 2,
+        lifetotal: 20,
+        bkgColor: "rgb(14, 104, 171)",
+        isDead: false,
+        isTop: false
+      }
     ]
   };
 
@@ -19,6 +31,8 @@ class Main extends Component {
     const index = players.indexOf(player);
     players[index] = { ...player };
     players[index].lifetotal++;
+    if (players[index].isDead && players[index].lifetotal > 0)
+      players[index].isDead = false;
     this.setState({ players });
   };
 
@@ -27,6 +41,8 @@ class Main extends Component {
     const index = players.indexOf(player);
     players[index] = { ...player };
     players[index].lifetotal--;
+    if (!players[index].isDead && players[index].lifetotal <= 0)
+      players[index].isDead = true;
     this.setState({ players });
   };
 
