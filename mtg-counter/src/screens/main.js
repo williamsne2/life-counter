@@ -9,8 +9,8 @@ class Main extends Component {
 
   state = {
     players: [
-      { id: 1, lifetotal: 20, bkgColor: "red", isTop: true, isDead: false },
-      { id: 2, lifetotal: 20, bkgColor: "blue", isTop: false, isDead: false }
+      { id: 1, lifetotal: 20, bkgColor: "rgb(211, 32, 42)", isTop: true },
+      { id: 2, lifetotal: 20, bkgColor: "rgb(14, 104, 171)", isTop: false }
     ]
   };
 
@@ -42,23 +42,23 @@ class Main extends Component {
   cycleColor = color => {
     let newColor = "";
     switch (color) {
-      case "white":
-        newColor = "blue";
+      case "rgb(248, 231, 185)":
+        newColor = "rgb(14,104,171)";
         break;
-      case "blue":
-        newColor = "black";
+      case "rgb(14,104,171)":
+        newColor = "rgb(70,70,70)";
         break;
-      case "black":
-        newColor = "red";
+      case "rgb(70,70,70)":
+        newColor = "rgb(211,32,42)";
         break;
-      case "red":
-        newColor = "green";
+      case "rgb(211,32,42)":
+        newColor = "rgb(0,115,62)";
         break;
-      case "green":
-        newColor = "white";
+      case "rgb(0,115,62)":
+        newColor = "rgb(248, 231, 185)";
         break;
       default:
-        newColor = "blue";
+        newColor = "rgb(14,104,171)";
     }
     return newColor;
   };
