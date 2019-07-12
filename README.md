@@ -1,6 +1,6 @@
-# MTG Counter
+# Life Counter
 
-MTG Counter is an open source react-native app that is a helpful tool for keeping track of life totals in card games like Magic: The Gathering. This design of the app is based on Talisman Games LifeTotal app, and is meant as a learning tool that can be extended quite easily.
+Life Counter is an open source react-native app that is a helpful tool for keeping track of life totals in card games like Magic: The Gathering. This design of the app is based on Talisman Games LifeTotal app, and is meant as a learning tool that can be extended quite easily.
 
 ## LifeTotal Tracking
 
